@@ -5,7 +5,7 @@
             <h2 class="subtitle">{{ .Site.Params.publications.Subtitle }}</h2>
         </div>
         <div class="publications-wrapper">
-            {{ range $element := sort .Site.Data.publications "weight" }}
+            {{ range $element := sort .Site.Data.publications "weight" "desc" }}
             <div class="publication-item">
                 {{ $resource := resources.Get (print "img/" $element.thumbnail) }}
                 {{ $image := $resource.Resize "x200" }}
