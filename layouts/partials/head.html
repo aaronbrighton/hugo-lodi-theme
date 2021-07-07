@@ -6,10 +6,12 @@
 <meta name="description" content="{{ .Site.Params.Description }}">
 <meta property="og:description" content="{{ .Site.Params.Description }}">
 <meta name="twitter:description" content="{{ .Site.Params.Description }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}img/{{ .Site.Params.description_photo }}">
-<meta name="twitter:image" content="{{ .Site.BaseURL }}img/{{ .Site.Params.description_photo }}">
-<link rel="icon" href="{{ .Site.BaseURL }}img/{{ .Site.Params.Favicon }}" type="image/x-icon">
-<link rel="shortcut icon" href="{{ .Site.BaseURL }}img/{{ .Site.Params.Favicon }}" type="image/x-icon">
-<link rel="stylesheet" href="css/final.css">
-<link rel="stylesheet" href="css/normalize.css">
+<meta property="og:image" content="img/{{ .Site.Params.description_photo }}">
+<meta name="twitter:image" content="img/{{ .Site.Params.description_photo }}">
+<link rel="icon" href="img/{{ .Site.Params.Favicon }}" type="image/x-icon">
+<link rel="shortcut icon" href="img/{{ .Site.Params.Favicon }}" type="image/x-icon">
+{{ $cssfinal := resources.Get "css/final.css" }}
+{{ $cssnormalize := resources.Get "css/normalize.css" }}
+{{ $allcss := slice $cssfinal $cssnormalize | resources.Concat "css/main.css" | resources.ExecuteAsTemplate "css/main.css" . | resources.ToCSS | minify | fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $allcss.RelPermalink }}" integrity="{{ $allcss.Data.Integrity }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">

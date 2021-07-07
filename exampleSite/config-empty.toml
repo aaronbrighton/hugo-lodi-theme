@@ -69,15 +69,15 @@ theme = "hugo-lodi-theme"
     # Link to your resume, place your PDF in the /static folder
     resume = "resume.pdf"
 
-[params.process]
+[params.projects]
     enable = true
-    title = "My Process"
-    subtitle = "Full Process Design"
+    title = "My Projects"
+    subtitle = "I'm working on"
 
-[params.case_studies]
+[params.publications]
     enable = true
-    title = "Case Studies"
-    subtitle = "Selected Works"
+    title = "Publications"
+    subtitle = "I've written"
 
 [params.footer]
     enable = true

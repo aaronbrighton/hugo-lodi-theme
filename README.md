@@ -1,7 +1,7 @@
 # Lodi Theme
 
 This theme is a Hugo port of [Alexis Collado's portfolio website](http://www.alexiscollado.com). It is meant to be a portfolio theme, with sections for describing yourself, your 
-process, and some case studies.
+projects, and some publications.
 
 ![](images/screenshot.png)
 
@@ -25,7 +25,7 @@ $ cp -r hugo-lodi-theme/exampleSite/* ../
 
 Add `theme = "hugo-lodi-theme"` to the  `config.toml` in your root folder, or when serving, use `hugo server -t hugo-lodi-theme`
 
-## Adding a new case study
+## Adding a new case study (NO LONGER WORKING, SEE PROJECTS)
 
 At the root of your Hugo site, you can use
 ```sh

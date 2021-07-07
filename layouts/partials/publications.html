@@ -1,0 +1,20 @@
+<section data-scroll-index="2">
+    <div class="publications">
+        <div class="header">
+            <h1 class="title">{{ .Site.Params.publications.Title }}</h1>
+            <h2 class="subtitle">{{ .Site.Params.publications.Subtitle }}</h2>
+        </div>
+        <div class="publications-wrapper">
+            {{ range $element := sort .Site.Data.publications "weight" }}
+            <div class="publication-item">
+                {{ $resource := resources.Get (print "img/" $element.thumbnail) }}
+                {{ $image := $resource.Resize "x200" }}
+                <a href="{{ $element.link }}" title="{{ $element.title }}" target="_blank"><img src="{{ $image.RelPermalink }}" alt=""></a>
+                <h5>{{ $element.title }}</h5>
+                <p>{{ $element.description }}</p>
+                <a href="{{ $element.link }}" title="{{ $element.title }}" target="_blank" class="read-more">Read</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
