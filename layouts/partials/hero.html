@@ -141,8 +141,8 @@
                 <img style="position: relative;top: 1.8px;padding-right: 6px;" src="svg/dl-resume.svg">
                 Download Resume</a>
             {{ end }}
-            {{ if isset .Site.Params "email" }}
-            <a href="mailto:{{ .Site.Params.Email }}" class="send-message" title="Email">Reach out to me</a>
+            {{ if isset .Site.Params "calendly" }}
+            <a href="{{ .Site.Params.Calendly }}" target="_blank" class="send-message" title="How can I help you?  Book time on my calendar">Looking for advice?</a>
             {{ end }}
         </div>
         <div class="hero-right">
