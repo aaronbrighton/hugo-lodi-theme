@@ -17,6 +17,14 @@
             {{ partial "projects.html" . }}
             {{ end }}
 
+            {{ if .Site.Params.testimonials.enable }}
+            {{ partial "testimonials.html" . }}
+            {{ end }}
+
+            {{ if .Site.Params.portfolio.enable }}
+            {{ partial "portfolio.html" . }}
+            {{ end }}
+
             {{ if .Site.Params.publications.enable }}
             {{ partial "publications.html" . }}
             {{ end }}

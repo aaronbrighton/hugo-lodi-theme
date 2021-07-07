@@ -1,0 +1,18 @@
+<section data-scroll-index="1">
+    <div class="projects">
+        <div class="header">
+            <h1 class="title">{{ .Site.Params.Testimonials.Title }}</h1>
+            <h2 class="subtitle">{{ .Site.Params.Testimonials.Subtitle }}</h2>
+        </div>
+        <div class="projects-wrapper">
+            {{ range $element := sort .Site.Data.testimonials "weight" }}
+            <div class="projects-item">
+                <figure class="item-header">
+                    <h3>{{ $element.title }}</h3>
+                </figure>
+                <p>{{ $element.description | markdownify }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
