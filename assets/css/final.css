@@ -649,7 +649,7 @@ section {
 }
 
 #scroll-element {
-  background-image:url('{{ .Site.BaseURL }}img/presenting-bg.jpg');
+  background-image:url('/img/presenting-bg.jpg');
   background-repeat: no-repeat;
   background-size: 100% 649px;
 }
