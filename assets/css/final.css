@@ -61,7 +61,8 @@ footer {
 }
 
 .sub-navigation {
-  max-width: 445px;
+  /*max-width: 445px;*/
+  max-width: 545px;
   height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,6 +648,12 @@ section {
   font-size: 16px;
 }
 
+#scroll-element {
+  background-image:url('{{ .Site.BaseURL }}img/presenting-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 649px;
+}
+
 @media all and (max-width:1040px) {
   .publication-item {
     max-width: 48%;
@@ -664,6 +671,9 @@ section {
   }
   .projects-item {
     max-width: 45%;
+  }
+  #scroll-element {
+    background-image: none;
   }
 }
 

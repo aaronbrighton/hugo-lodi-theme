@@ -1,6 +1,7 @@
 {{ $jquery := resources.Get "js/jquery-1.js" }}
 {{ $stickUp := resources.Get "js/stickUp.js" }}
 {{ $scrollIt := resources.Get "js/scrollIt.js" }}
+{{ $scrollIt := resources.Get "js/yt.js" }}
 {{ $js := slice $jquery $stickUp $scrollIt | resources.Concat "js/bundle.js" | minify | fingerprint "sha256" }}
 <script src="{{ $js.RelPermalink }}" type="text/javascript" integrity="{{ $js.Data.Integrity }}"></script>
 <script type="text/javascript">

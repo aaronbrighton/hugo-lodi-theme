@@ -29,6 +29,10 @@
             {{ partial "publications.html" . }}
             {{ end }}
 
+            {{ if .Site.Params.drones.enable }}
+            {{ partial "drones.html" . }}
+            {{ end }}
+
             {{ if .Site.Params.footer.enable }}
             {{ partial "footer.html" . }}
             {{ end }}

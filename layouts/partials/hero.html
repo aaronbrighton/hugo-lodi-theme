@@ -101,6 +101,12 @@
                     </svg>
                 </a>
                 {{ end }}
+                {{ if isset .Site.Params "instagram" }}
+                <a href="https://instagram.com/{{ .Site.Params.Instagram }}" target="blank">
+                    <!--?xml version="1.0" encoding="UTF-8"?-->
+                    <img src="{{ .Site.BaseURL }}img/instagram.png" style="width: 16px;" alt="">
+                </a>
+                {{ end }}
                 {{ if isset .Site.Params "dribbble" }}
                 <a href="https://dribbble.com/{{ .Site.Params.Dribbble }}" target="blank">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
