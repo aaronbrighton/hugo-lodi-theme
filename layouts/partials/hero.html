@@ -158,7 +158,7 @@
             {{ end }}
             <div class="certs">
                 <div class="certs-wrapper">
-                {{ range .Site.Params.Cert }}
+                {{ range .Site.Params.Cert_1_3 }}
                     <div class="projects-item certs-item">
                         <figure class="item-header">
                     <a href="{{ .link }}" title="{{ .title }}" target="_blank"><img src="img/{{ .img }}" alt="{{ .alt }}"></a>
@@ -167,6 +167,13 @@
                 {{ end }}
                 </div>
                 <div class="certs-wrapper">
+                {{ range .Site.Params.Cert_4_6 }}
+                    <div class="projects-item certs-item">
+                        <figure class="item-header">
+                    <a href="{{ .link }}" title="{{ .title }}" target="_blank"><img src="img/{{ .img }}" alt="{{ .alt }}"></a>
+                        </figure>
+                    </div>
+                {{ end }}
                 {{ range .Site.Params.Cert_Expired }}
                     <div class="projects-item certs-item certs-item-expired">
                         <figure class="item-header">
